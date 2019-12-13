@@ -16,7 +16,10 @@ body{
 
 img{
     width: 300px;
-    filter: contrast(0);
+}
+
+img:hover{
+    cursor: pointer;
 }
 
 .polaroid{
@@ -27,6 +30,36 @@ img{
     box-shadow: 5px 5px 10px rgba(0,0,0,.5);
     margin-bottom: 5%;
 }
+
+.modal{
+    display: none;
+    position: fixed;
+    padding-top: 200px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content{
+    margin:auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation: zoom .5s;
+}
+
+.cerrar{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
  /*From phones to phablets*/
 @media (max-width:760.98px){
     .polaroid{
@@ -34,8 +67,6 @@ img{
     }
     img{
         width: 100%;
-        animation: reveal 3s;
-        animation-fill-mode: forwards;
     }
 }
 
@@ -44,11 +75,6 @@ img{
         display: inline-block;
         margin-left: 6%;
     }
-
-    img{
-        animation: reveal 3s;
-        animation-fill-mode: forwards;
-    }
 }
 
 @media (min-width:1367px){
@@ -56,15 +82,12 @@ img{
         display: inline-block;
         margin-left: 6%;
     }
+
     
-    img:hover{
-        animation: reveal 3s;
-        animation-fill-mode: forwards;
-    }
 }
 
-@keyframes reveal {
-    from {filter: contrast(0);}
-    to   {filter: contrast(1);}
+@keyframes zoom{
+    from {transform:scale(0)}
+    to   {transform: scale(1);}
 }
 
