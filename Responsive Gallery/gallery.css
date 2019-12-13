@@ -1,0 +1,66 @@
+@font-face{
+    font-family: LOTR;
+    src: url(elements/hobbitonbrushhand\ 2.ttf)
+}
+
+*{
+    font-family: LOTR;
+    white-space: normal;
+    text-align: center;
+}
+
+
+img{
+    width: 300px;
+    filter: contrast(0);
+}
+
+.polaroid{
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+    margin-bottom: 5%;
+}
+ /*From phones to phablets*/
+@media (max-width:760.98px){
+    .polaroid{
+        margin: 5px 0 25px 0;
+    }
+    img{
+        width: 100%;
+        animation: reveal 3s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@media(min-width:761px) and (max-width:1399.98px){
+    .polaroid{
+        display: inline-block;
+        margin-left: 6%;
+    }
+
+    img{
+        animation: reveal 3s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@media (min-width:1400px){
+    .polaroid{
+        display: inline-block;
+        margin-left: 6%;
+    }
+    
+    img:hover{
+        animation: reveal 3s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes reveal {
+    from {filter: contrast(0);}
+    to   {filter: contrast(1);}
+}
+
