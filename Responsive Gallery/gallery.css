@@ -35,7 +35,7 @@ img{
     }
 }
 
-@media(min-width:761px) and (max-width:1399.98px){
+@media(min-width:761px) and (max-width:1366.98px){
     .polaroid{
         display: inline-block;
         margin-left: 6%;
@@ -47,7 +47,7 @@ img{
     }
 }
 
-@media (min-width:1400px){
+@media (min-width:1367px){
     .polaroid{
         display: inline-block;
         margin-left: 6%;
