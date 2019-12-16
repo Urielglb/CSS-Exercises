@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Gallery</title>
-    <link rel="stylesheet" href="modal.css">
+    <title>NavBar</title>
+    <link rel="stylesheet" href="navbar.css">
     <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="modal.js"></script>
+    <script src="navbar.js"></script>
+    <script src="https://kit.fontawesome.com/c52d13a728.js" crossorigin="anonymous"></script>
 </head>
+<header>
+    <nav>
+        <div class="logo-space">
+            <p href="#" class="logo">NavBar Excersice</p>
+        </div>
+        <div class="icon-nav">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times" style="display: none;"></i>
+        </div>
+        <ul>
+            <li><a href="https://github.com/Urielglb">Github</a></li>
+            <li><a href="https://es-la.facebook.com/uriel.glb">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
 <body>
-    <h1>Modal images</h1>
     <h2>LOTR  Locations </h2>
     <div class="modal" id="modal">
         <span class="cerrar">X</span>
