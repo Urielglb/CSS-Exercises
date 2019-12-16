@@ -1,0 +1,169 @@
+@font-face{
+    font-family: LOTR;
+    src: url(elements/hobbitonbrushhand\ 2.ttf)
+}
+*{
+    font-family: LOTR;
+    white-space: normal;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    height: auto;
+    padding-bottom: 75px;
+    margin-bottom: 2%;
+}
+
+nav{
+    background-color: burlywood;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+nav ul{
+    margin-right: 50px;
+}
+
+nav ul li{
+    margin: 20px;
+    float: right;
+    display: inline;
+}
+
+li a{
+    font-size: 1.5em;
+    color: black;
+    text-decoration: none;
+}
+
+.logo-space{
+    float: left;
+    padding: 1em;
+    width: 30%;
+}
+
+.logo{
+    font-size: 1.5em;
+    color: black;
+    text-decoration: none;
+}
+
+.icon-nav{
+    display: none;
+}
+
+.show{
+    display: block;
+    float: none;
+}
+
+h2{
+    text-align: center;
+}
+
+body{
+    background-image: url("elements/back.jpg");
+    background-size: cover;
+}
+
+img{
+    width: 300px;
+}
+
+img:hover{
+    cursor: pointer;
+}
+
+.polaroid{
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    padding-top: 200px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content{
+    margin:auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation: zoom .5s;
+}
+
+.cerrar{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+ /*From phones to phablets*/
+@media (max-width:760.98px){
+    img{
+        width: 100%;
+    }
+
+    nav ul li{
+        display: none;
+    }
+
+    .polaroid{
+        margin: 5px 0 25px 0;
+    }
+
+    .icon-nav{
+        cursor: pointer;
+        font-size: 1.5em;
+        display: block;
+        margin: 20px;
+        float: right;
+    }
+
+    .logo-space{
+        width: 70%;
+    }
+
+}
+
+@media(min-width:761px) and (max-width:1366.98px){
+    .polaroid{
+        display: inline-block;
+        margin-left: 6%;
+    }
+}
+
+@media (min-width:1367px){
+    .polaroid{
+        display: inline-block;
+        margin-left: 6%;
+    }
+
+    
+}
+
+@keyframes zoom{
+    from {transform:scale(0)}
+    to   {transform: scale(1);}
+}
